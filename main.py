@@ -9,11 +9,11 @@ def main():
   y = SCREEN_HEIGHT / 2
   player = Player(x,y)
   screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-  
+
   while True:
     screen.fill("black")
     player.draw(screen)
-
+    player.update(dt)
 
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
